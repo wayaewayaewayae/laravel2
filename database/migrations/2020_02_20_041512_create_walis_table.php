@@ -19,6 +19,8 @@ class CreateWalisTable extends Migration
             $table->unsignedBigInteger('id_mahasiswa');
             $table->foreign('id_mahasiswa')->references('id')
                   ->on('mahasiswas')->onDelete('cascade');
+            $table->timestamps();
+
         });
     }
 

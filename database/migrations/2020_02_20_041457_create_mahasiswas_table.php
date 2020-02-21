@@ -20,6 +20,7 @@ class CreateMahasiswasTable extends Migration
             $table->unsignedBigInteger('id_dosen');
             $table->foreign('id_dosen')->references('id')
                   ->on('dosens')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
