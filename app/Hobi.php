@@ -11,6 +11,6 @@ class Hobi extends Model
     public $timestamp = true;
 
     public function mahasiswa(){
-        return $this->belongsToMany('App\Mahasiswa','mahasiswa_hobi','id_mahasiswa','id_hobi');
+        return $this->belongsToMany('App\Mahasiswa','mahasiswa_hobi','id_hobi','id_mahasiswa');
     }
 }

@@ -64,10 +64,10 @@ class RelasiTableSeeder extends Seeder
         $mancing = Hobi::create([
             'hobi' => 'Mancing Keributan'
         ]);
-                $nyanyi = Hobi::create([
+        $nyanyi = Hobi::create([
             'hobi' => 'Dangdutan'
         ]);
-                $mengaji = Hobi::create([
+        $mengaji = Hobi::create([
             'hobi' => 'Mengaji al-quran'
         ]);
 
