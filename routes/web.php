@@ -93,3 +93,27 @@ use App\Hobi;
         $mahasiswa = Mahasiswa::with('wali','dosen','hobi')->get()->take(1);
         return view('eloquent-tgs',compact('mahasiswa'));
     });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+//Blade template
+Route::get('beranda',function()
+{
+    return view('beranda');
+});
+
+Route::get('Tentang',function()
+{
+    return view('Tentang');
+});
+
+Route::get('Contact',function()
+{
+    return view('Contact');
+});
+
+//crud
+Route::resource('dosen'.'DosenController');
