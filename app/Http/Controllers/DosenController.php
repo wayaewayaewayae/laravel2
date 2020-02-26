@@ -1,20 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Dosen;
 use Illuminate\Http\Request;
 
 class DosenController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         $dosen = Dosen::all();
-        return view('dosen.index'.compact('dosen'));
+        return view('dosen.index',compact('dosen'));
     }
 
     /**
@@ -52,7 +51,7 @@ class DosenController extends Controller
     public function show($id)
     {
         $dosen = Dosen::findOrFail($id);
-        return view('dosen.show'.compact('dosen'));
+        return view('dosen.show',compact('dosen'));
     }
 
     /**
@@ -64,7 +63,7 @@ class DosenController extends Controller
     public function edit($id)
     {
         $dosen = Dosen::findOrFail($id);
-        return view('dosen.edit'.compact('dosen'));
+        return view('dosen.edit',compact('dosen'));
     }
 
     /**
@@ -92,7 +91,7 @@ class DosenController extends Controller
      */
     public function destroy($id)
     {
-        $dosen = Dosen::findOrFail($id)->delete;
+        $dosen = Dosen::findOrFail($id)->delete();
         return redirect()->route('dosen.index')
                          ->with(['message'=>'Dosen berhasil dihapus']);
     }

@@ -116,4 +116,4 @@ Route::get('Contact',function()
 });
 
 //crud
-Route::resource('dosen'.'DosenController');
+Route::resource('dosen','DosenController');
