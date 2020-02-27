@@ -115,5 +115,12 @@ Route::get('Contact',function()
     return view('Contact');
 });
 
-//crud
+//crud dosen
 Route::resource('dosen','DosenController');
+
+//crud hobi
+Route::resource('hobi','HobiController');
+
+//crud mahasiswa
+Route::resource('mahasiswa','MahasiswaController');
+
