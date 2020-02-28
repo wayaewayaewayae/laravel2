@@ -124,3 +124,6 @@ Route::resource('hobi','HobiController');
 //crud mahasiswa
 Route::resource('mahasiswa','MahasiswaController');
 
+//crud wali
+Route::resource('wali','WaliController');
+
